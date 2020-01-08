@@ -2,7 +2,9 @@
     <a href="{{route('product.show',['product'=>$product])}}">
         {{$product->name}}
     </a>
-    - {{$product->price}}<br>
+    - {{$product->price}}
+    <a href="{{route('product.destroy',['product'=>$product])}}">[x]</a>
+    <br>
 @endforeach
 
 <a href="{{route('product.create')}}">Neues Produkt</a>
