@@ -4,6 +4,9 @@
 <p>
     {{$category->description}}
 </p>
+@foreach($products as $product)
+    - {{$product->name}}
+@endforeach
 <br>
 <br>
 <a href="{{route('category.index')}}">Zur Übersicht</a>
