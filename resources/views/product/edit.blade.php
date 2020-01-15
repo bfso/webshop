@@ -1,3 +1,5 @@
+@include('partials.errors')
+
 <form action="{{route('product.update',['product'=>$product])}}" method="POST">
     @csrf
 {{--    @method('PUT')--}}

@@ -1,8 +1,10 @@
+@include('partials.errors')
+
 <form action="{{route('product.store')}}" method="POST">
     @csrf
-    <input type="text" name="name" value=""><br>
-    <input type="text" name="price" value=""><br>
-    <textarea name="description">
+    <label for="name">@lang('product.name')</label> <input type="text" name="name" value=""><br>
+    <label for="price">@lang('product.price')</label> <input type="text" name="price" value=""><br>
+    <label for="description">@lang('product.description')</label> <textarea name="description">
 
     </textarea>
     <br>
