@@ -2,8 +2,12 @@
     <a href="{{route('product.show',['product'=>$product])}}">
         {{$product->name}}
     </a>
-    - {{$product->price}} ----
-    <a href="{{route('product.destroy',['product'=>$product])}}">[x]</a>
+    - {{$product->price}}
+    <form action="{{ route('product.destroy',['product'=>$product]) }}" method="POST">
+        @method('DELETE')
+        @csrf
+        <button>[x]</button>
+    </form>
     <br>
 @endforeach
 
